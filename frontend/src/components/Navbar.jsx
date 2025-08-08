@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaPalette } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { MdOutlineDarkMode, MdOutlineLightMode } from "react-icons/md";
 
 const Navbar = () => {
@@ -31,13 +31,13 @@ const Navbar = () => {
 
                     {/* Desktop Menu */}
                     <div className="hidden md:flex items-center space-x-6">
-                        <a href="#" className="text-charcoal dark:text-offwhite hover:text-teal">
+                        <Link to="/" className="text-charcoal dark:text-offwhite hover:text-teal">
                             Home
-                        </a>
+                        </Link>
 
-                        <a href="#" className="text-charcoal dark:text-offwhite hover:text-teal">
+                        <Link to="/popular" className="text-charcoal dark:text-offwhite hover:text-teal">
                             Populate Palettes
-                        </a>
+                        </Link>
 
                         <button className="bg-teal text-white px-4 py-2 rounded-lg hover:bg-teal/90">
                             Login
@@ -90,12 +90,12 @@ const Navbar = () => {
             {/* Mobile Menu */}
             {isMenuOpen && (
                 <div className="md:hidden bg-white dark:bg-charcoal px-4 py-3 space-y-2 border-t border-gray-200 dark:border-gray-800">
-                    <a href="#" className="block text-charcoal dark:text-offwhite hover:text-teal-500">
+                    <Link to="/" className="block text-charcoal dark:text-offwhite hover:text-teal-500">
                         Home
-                    </a>
-                    <a href="#" className="block text-charcoal dark:text-offwhite hover:text-teal-500">
+                    </Link>
+                    <Link to="/popular" className="block text-charcoal dark:text-offwhite hover:text-teal-500">
                         Popular Palettes
-                    </a>
+                    </Link>
                     <button className="w-full bg-teal hover:bg-teal/90 text-white px-4 py-2 rounded-lg hover:bg-teal-600">
                         Login
                     </button>
